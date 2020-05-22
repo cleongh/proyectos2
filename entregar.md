@@ -49,7 +49,7 @@ Entre otras cosas que consideréis relevantes, tenéis que contar *explícitamen
 
 Entre otras cosas que consideréis relevantes, tenéis que contar *explícitamente*:
 
-- El diagrama de *burnout*.
+- El diagrama de *burn down*, o alguna otra forma de mostrar el progreso de la planificación.
 - ¿Se ha llevado siempre al día la planificación?
 - Canales de comunicación usados.
 - ¿Se han implementado tareas que no estuvieran planificadas?
