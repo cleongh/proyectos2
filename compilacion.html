@@ -7,8 +7,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reset.css">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="reveal.js/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,7 @@
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
     div.sourceCode { margin: 1em 0; }
     pre.sourceCode { margin: 0; }
@@ -79,19 +80,8 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+  <link rel="stylesheet" href="reveal.js/dist/theme/beige.css" id="theme">
   <link rel="stylesheet" href="base.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
 </head>
 <body>
   <div class="reveal">
@@ -163,11 +153,11 @@
 <section class="slide level2">
 
 <p>Es posible <em>compilar</em> correctamente archivos C++ que hacen referencia a funciones declaradas, pero no implementadas:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">void</span> g();</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="dt">void</span> f() {</span>
-<span id="cb1-4"><a href="#cb1-4"></a>  g(); <span class="co">// válido para *compilar*</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> g();</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f() {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  g(); <span class="co">// válido para *compilar*</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </section>
 <section class="slide level2">
 
@@ -185,7 +175,7 @@
 <section class="slide level2">
 
 <p>Como al compilador no le importa la implementación, sólo la declaración, nos vale con un <em>.h</em>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="pp">#include </span><span class="im">&quot;SDL.h&quot;</span><span class="pp"> </span><span class="co">// sólo declaraciones</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&quot;SDL.h&quot;</span><span class="pp"> </span><span class="co">// sólo declaraciones</span></span></code></pre></div>
 </section>
 <section id="enlazado" class="slide level2">
 <h2>Enlazado</h2>
@@ -202,12 +192,12 @@
 <section class="slide level2">
 
 <p>En general, estos errores ocurren cuando hemos usado una cosa que está declarada, pero no implementada:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">void</span> g();</span>
-<span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="dt">void</span> f() {</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  g(); <span class="co">// si ningún otro archivo implementa `g`</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>       <span class="co">// el enlazador dará un error</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> g();</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> f() {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  g(); <span class="co">// si ningún otro archivo implementa `g`</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>       <span class="co">// el enlazador dará un error</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </section>
 <section id="bibliotecas-durante-en-enlazado" class="slide level2">
 <h2>Bibliotecas durante en enlazado</h2>
@@ -291,12 +281,12 @@
 <section class="slide level2">
 
 <p>Podemos cambiar la ruta base, que es a partir de la cual el ejecutable encontrará los recursos:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">// /raiz_proyecto</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co">//    ejecutable.exe</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="co">//    /subcarpeta</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co">//        archivo.txt</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">//</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>file.open(<span class="st">&quot;subcarpeta/archivo.txt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// /raiz_proyecto</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">//    ejecutable.exe</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">//    /subcarpeta</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">//        archivo.txt</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">//</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>file.open(<span class="st">&quot;subcarpeta/archivo.txt&quot;</span>)</span></code></pre></div>
 </section></section>
 <section>
 <section id="ejemplo-gcc" class="title-slide slide level1">
@@ -306,17 +296,17 @@
 <section class="slide level2">
 
 <p>Compilar:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">gcc</span> -c sdl.gcc -I/usr/local/include/SDL2</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gcc</span> <span class="at">-c</span> sdl.gcc <span class="at">-I</span>/usr/local/include/SDL2</span></code></pre></div>
 </section>
 <section class="slide level2">
 
 <p>Enlazar:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">gcc</span> sdl.o -L/usr/local/lib -lSDL2 -o sdl.exe</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gcc</span> sdl.o <span class="at">-L</span>/usr/local/lib <span class="at">-lSDL2</span> <span class="at">-o</span> sdl.exe</span></code></pre></div>
 </section>
 <section class="slide level2">
 
 <p>Ejecutar:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">./sdl.exe</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./sdl.exe</span></span></code></pre></div>
 </section>
 <section class="slide level2">
 
@@ -326,12 +316,12 @@
 <section class="slide level2">
 
 <p>Añadir información de depuración:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">gcc</span> -g sdl.cpp -I/usr/local/include/SDL2 -L/usr/local/lib -lSDL2 -o sdl.exe</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gcc</span> <span class="at">-g</span> sdl.cpp <span class="at">-I</span>/usr/local/include/SDL2 <span class="at">-L</span>/usr/local/lib <span class="at">-lSDL2</span> <span class="at">-o</span> sdl.exe</span></code></pre></div>
 </section>
 <section class="slide level2">
 
 <p>Optimización</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">gcc</span> -O2 sdl.cpp -I/usr/local/include/SDL2 -L/usr/local/lib -lSDL2 -o sdl.exe</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gcc</span> <span class="at">-O2</span> sdl.cpp <span class="at">-I</span>/usr/local/include/SDL2 <span class="at">-L</span>/usr/local/lib <span class="at">-lSDL2</span> <span class="at">-o</span> sdl.exe</span></code></pre></div>
 </section></section>
 <section>
 <section id="ejemplo-visual-studio" class="title-slide slide level1">
@@ -341,43 +331,43 @@
 <section class="slide level2">
 
 <figure>
-<img data-src="2020-02-03-20-04-05.png" style="width:50.0%" alt="" /><figcaption>Creamos una nueva “aplicación de Windows”</figcaption>
+<img data-src="2020-02-03-20-04-05.png" style="width:50.0%" alt="Creamos una nueva “aplicación de Windows”" /><figcaption aria-hidden="true">Creamos una nueva “aplicación de Windows”</figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="2020-02-03-20-04-58.png" style="width:50.0%" alt="" /><figcaption>Ponemos los nombres de las rutas</figcaption>
+<img data-src="2020-02-03-20-04-58.png" style="width:50.0%" alt="Ponemos los nombres de las rutas" /><figcaption aria-hidden="true">Ponemos los nombres de las rutas</figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="2020-02-03-20-07-57.png" style="width:50.0%" alt="" /><figcaption>Borramos el contenido</figcaption>
+<img data-src="2020-02-03-20-07-57.png" style="width:50.0%" alt="Borramos el contenido" /><figcaption aria-hidden="true">Borramos el contenido</figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <p>Lo reemplazamos por:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1"></a><span class="pp">#include </span><span class="im">&quot;SDL.h&quot;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a><span class="dt">int</span> main(<span class="dt">int</span> <span class="dt">char</span>, <span class="dt">char</span>* argv[])</span>
-<span id="cb11-4"><a href="#cb11-4"></a>{</span>
-<span id="cb11-5"><a href="#cb11-5"></a>  <span class="cf">return</span> <span class="dv">0</span>;</span>
-<span id="cb11-6"><a href="#cb11-6"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&quot;SDL.h&quot;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main(<span class="dt">int</span> <span class="dt">char</span>, <span class="dt">char</span>* argv[])</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span>;</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </section>
 <section class="slide level2">
 
 <p>Es importante poner:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1"></a><span class="dt">int</span> main(<span class="dt">int</span> <span class="dt">char</span>, <span class="dt">char</span>* argv[]) {}</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main(<span class="dt">int</span> <span class="dt">char</span>, <span class="dt">char</span>* argv[]) {}</span></code></pre></div>
 <p>y no sólo:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb13-1"><a href="#cb13-1"></a><span class="dt">int</span> main() {}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main() {}</span></code></pre></div>
 <p>Para que no haya problemas de enlazado con SDL</p>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="2020-02-03-20-25-09.png" alt="" /><figcaption>Bajamos las “Development libraries”</figcaption>
+<img data-src="2020-02-03-20-25-09.png" alt="Bajamos las “Development libraries”" /><figcaption aria-hidden="true">Bajamos las “Development libraries”</figcaption>
 </figure>
 </section>
 <section class="slide level2">
@@ -392,46 +382,46 @@
 <section id="rutas-de-includes" class="slide level2">
 <h2>Rutas de “includes”</h2>
 <figure>
-<img data-src="2020-02-03-20-52-58.png" alt="" /><figcaption>En “Propiedades del proyecto”</figcaption>
+<img data-src="2020-02-03-20-52-58.png" alt="En “Propiedades del proyecto”" /><figcaption aria-hidden="true">En “Propiedades del proyecto”</figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <p>Vamos a establecer la misma ruta de <code>includes</code> para “Todas las configuraciones”, en todas las plataformas</p>
 <figure>
-<img data-src="2020-02-03-20-53-34.png" alt="" /><figcaption><em>Generalmente</em>, los includes valen para varias arquitecturas</figcaption>
+<img data-src="2020-02-03-20-53-34.png" alt="Generalmente, los includes valen para varias arquitecturas" /><figcaption aria-hidden="true"><em>Generalmente</em>, los includes valen para varias arquitecturas</figcaption>
 </figure>
 </section>
 <section id="rutas-de-librerías" class="slide level2">
 <h2>Rutas de librerías</h2>
 <p>Para x64 (aquí ya importa la plataforma):</p>
 <figure>
-<img data-src="2020-02-03-20-45-39.png" alt="" /><figcaption>La ruta de los <code>.lib</code> que queremos usar</figcaption>
+<img data-src="2020-02-03-20-45-39.png" alt="La ruta de los .lib que queremos usar" /><figcaption aria-hidden="true">La ruta de los <code>.lib</code> que queremos usar</figcaption>
 </figure>
 </section>
 <section id="librerías" class="slide level2">
 <h2>Librerías</h2>
 <figure>
-<img data-src="2020-02-07-16-15-58.png" alt="" /><figcaption>Los archivos <code>.lib</code> serán encontrados en las rutas que hemos puesto antes</figcaption>
+<img data-src="2020-02-07-16-15-58.png" alt="Los archivos .lib serán encontrados en las rutas que hemos puesto antes" /><figcaption aria-hidden="true">Los archivos <code>.lib</code> serán encontrados en las rutas que hemos puesto antes</figcaption>
 </figure>
 </section>
 <section id="depuración-1" class="slide level2">
 <h2>Depuración</h2>
 <figure>
-<img data-src="2020-02-07-16-17-47.png" alt="" /><figcaption>Elegimos la ruta desde la que se ejecutará el proyecto al depurar</figcaption>
+<img data-src="2020-02-07-16-17-47.png" alt="Elegimos la ruta desde la que se ejecutará el proyecto al depurar" /><figcaption aria-hidden="true">Elegimos la ruta desde la que se ejecutará el proyecto al depurar</figcaption>
 </figure>
 <p><small>La ruta tiene que contener el archivo <code>SDL2.dll</code></small></p>
 </section>
 <section id="arquitectura-1" class="slide level2">
 <h2>Arquitectura</h2>
 <figure>
-<img data-src="2020-02-07-16-18-06.png" alt="" /><figcaption>El tipo de código objeto que se va a generar (hoy en día, x64 en general)</figcaption>
+<img data-src="2020-02-07-16-18-06.png" alt="El tipo de código objeto que se va a generar (hoy en día, x64 en general)" /><figcaption aria-hidden="true">El tipo de código objeto que se va a generar (hoy en día, x64 en general)</figcaption>
 </figure>
 </section>
 <section id="release-vs.-debug" class="slide level2">
 <h2><em>Release</em> vs. <em>Debug</em></h2>
 <figure>
-<img data-src="2020-02-07-16-18-24.png" alt="" /><figcaption>Configuramos las opciones de cada una, y elegimos cómo queremos construir</figcaption>
+<img data-src="2020-02-07-16-18-24.png" alt="Configuramos las opciones de cada una, y elegimos cómo queremos construir" /><figcaption aria-hidden="true">Configuramos las opciones de cada una, y elegimos cómo queremos construir</figcaption>
 </figure>
 </section>
 <section class="slide level2">
@@ -449,24 +439,30 @@
 <section class="slide level2">
 
 <figure>
-<img data-src="2020-02-07-16-36-11.png" style="width:60.0%" alt="" /><figcaption>En <em>Debug</em></figcaption>
+<img data-src="2020-02-07-16-36-11.png" style="width:60.0%" alt="En Debug" /><figcaption aria-hidden="true">En <em>Debug</em></figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="2020-02-07-16-36-37.png" style="width:60.0%" alt="" /><figcaption>En <em>Release</em></figcaption>
+<img data-src="2020-02-07-16-36-37.png" style="width:60.0%" alt="En Release" /><figcaption aria-hidden="true">En <em>Release</em></figcaption>
 </figure>
 </section></section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="reveal.js/plugin/notes/notes.js"></script>
+  <script src="reveal.js/plugin/search/search.js"></script>
+  <script src="reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="reveal.js/plugin/math/math.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Display a presentation progress bar
         progress: true,
@@ -475,7 +471,7 @@
         // Push each slide change to the browser history
         history: true,
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -491,12 +487,12 @@
           },
         },
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/math/math.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
         ]
       });
     </script>

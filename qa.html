@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Pruebas y QA</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/dist/theme/beige.css" id="theme">
+  <link rel="stylesheet" href="base.css"/>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Pruebas y QA</h1>
+</section>
+
+<section>
+<section id="proceso-de-pruebas-para-los-proyectos-de-pr2" class="title-slide slide level1">
+<h1>Proceso de pruebas para los proyectos de PR2</h1>
+
+</section>
+<section class="slide level2">
+
+<p>Es <strong>necesario y obligatorio</strong> hacer un proceso de QA en el proyecto.</p>
+</section>
+<section class="slide level2">
+
+<p>Tenéis libertad para plantearlo como queráis, pero parte de la entrega final tendrá que incluir un estudio con gente externa</p>
+</section>
+<section class="slide level2">
+
+<p>Para hacer pruebas válidas, hay que hacer que gente representativa de nuestro <em>target</em> juegue al juego</p>
+</section>
+<section class="slide level2">
+
+<p>Y, también, estudiar lo que <em>hacen</em> y lo que <em>dicen</em></p>
+</section>
+<section class="slide level2">
+
+<p>Por tanto, hay dos partes principales que resolver:</p>
+<ul>
+<li>Quién va a jugar y probar mi juego (no pueden ser los miembros del equipo)</li>
+<li>Cómo se va a observar el proceso</li>
+</ul>
+</section></section>
+<section>
+<section id="quiénes" class="title-slide slide level1">
+<h1>Quiénes</h1>
+
+</section>
+<section class="slide level2">
+
+<p>Es importante que se elija un grupo de personas que represente nuestro objetivo</p>
+<p>(No tiene sentido probar un juego infantil con adultos)</p>
+</section>
+<section class="slide level2">
+
+<p>Es difícil conseguir gente de forma general, y hay que intentar no cansar a los sujetos</p>
+</section>
+<section class="slide level2">
+
+<p>Las pruebas con externos no reemplazan a vuestras pruebas de calidad, son algo adicional</p>
+</section></section>
+<section>
+<section id="cuándo-y-cuánto" class="title-slide slide level1">
+<h1>Cuándo y cuánto</h1>
+
+</section>
+<section class="slide level2">
+
+<p>Hay que decidir cuándo hacer baterías de <em>testing</em></p>
+</section>
+<section class="slide level2">
+
+<p>No tiene sentido hacerlas muy pronto porque no hay prototipo</p>
+<p>No tiene sentido hacerlas muy tarde porque no hay tiempo para usar los datos</p>
+</section>
+<section class="slide level2">
+
+<p>No se pueden hacer pruebas muy costosas todas las semanas</p>
+<p>No tiene sentido hacer pruebas cada 2 meses</p>
+</section>
+<section class="slide level2">
+
+<p>Aproximadamente, tendréis que hacer una batería de pruebas + informe una vez por hito, pero no viene mal hacer más</p>
+</section></section>
+<section>
+<section id="qué-preguntar" class="title-slide slide level1">
+<h1>Qué preguntar</h1>
+
+</section>
+<section class="slide level2">
+
+<p>Si preguntáis…</p>
+<blockquote>
+<p>¿Te ha gustado el juego?</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p>… ¿vais a obtener información útil?</p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>¿Te ha parecido muy rápido el movimiento?</li>
+<li>Evalúa, de 1 a 5, la dificultad del nivel 1</li>
+<li>¿Qué cambiarías?</li>
+<li>¿Cuáles son las cosas que más te han gustado?</li>
+<li>¿Y las que menos?</li>
+</ul>
+</section>
+<section id="no-preguntéis-todo" class="slide level2">
+<h2>No preguntéis todo</h2>
+<p>Las opiniones son útiles, pero saber lo que hacen los jugadores, mucho más:</p>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>¿Cuánto tiempo se tarda en pasar la demo?</li>
+<li>¿Cuánto tardan en aprender?</li>
+<li>¿Qué mecánicas usan más?</li>
+<li>¿Se leen todo el texto?</li>
+<li>¿Qué partes del nivel no se exploran? <span class="math inline">\(\rightarrow\)</span> Buen sitio para preguntar por qué</li>
+</ul>
+</section>
+<section id="formato" class="slide level2">
+<h2>Formato</h2>
+<p>Está bien hablar, pero tenéis que <em>almacenar información</em></p>
+</section>
+<section class="slide level2">
+
+<p>Preguntad con un Google Sheet (por ejemplo), almacenad todo en una hoja de cálculo, tomad notas…</p>
+</section></section>
+<section>
+<section id="informe" class="title-slide slide level1">
+<h1>Informe</h1>
+
+</section>
+<section class="slide level2">
+
+<p>En la documentación general del proyecto tenéis que tener un informe de pruebas:</p>
+<ul>
+<li>Cuándo se han hecho, con cuánta gente cada vez, qué se les ha preguntado, y qué ha salido</li>
+<li>Una conclusión general de las pruebas (resumiendo todo hasta la fecha)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Pero, lo más importante…</p>
+</section>
+<section id="uso-del-informe" class="slide level2">
+<h2>Uso del informe</h2>
+<ul>
+<li>¿Cómo se ha aplicado la información de QA al proyecto?</li>
+<li>¿Qué cambios se han hecho?</li>
+<li>¿Qué problemas/limitaciones se han descubierto?</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="reveal.js/plugin/notes/notes.js"></script>
+  <script src="reveal.js/plugin/search/search.js"></script>
+  <script src="reveal.js/plugin/zoom/zoom.js"></script>
+  <script src="reveal.js/plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
