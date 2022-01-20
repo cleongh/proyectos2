@@ -86,6 +86,20 @@ Podéis usar /assets/ externos o hacerlos vosotros
 
 Lo que se tendrá en cuenta es la calidad del arte, la coherencia y técnica (paletas, aplicación de color, proporciones, sonidos apropiados...)
 
+** Nota
+
+*Sólo cuenta la última nota*, que es la que realmente resume la calidad del proyecto
+
+Iréis teniendo notas y realimentación durante la asignatura, pero es sólo para que sepáis el estado y el criterio del equipo docente
+
+** Contribución
+
+La contribución que declaréis tiene que /ser única/ y consensuada
+
+Será tenida en cuenta como dato adicional, pero *sólo a título informativo*
+
+Si hay problemas con el consenso, lo mejor es ponerse en contacto con el equipo docente
+
 * Alcance de la asignatura
 
 En PR2 se han conseguido hacer algunos juegos excelentes, presentados en ferias y publicados
