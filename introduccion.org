@@ -1,23 +1,22 @@
 #+TITLE: Proyectos II
 #+LANGUAGE: es
-#+OPTIONS: toc:nil, reveal_history:t, timestamp:nil, date:nil, author:nil, num:nil, reveal_single_file:t
-#+REVEAL_INIT_OPTIONS: slideNumber:true
+#+OPTIONS: toc:nil reveal_history:t timestamp:nil date:nil author:nil num:nil reveal_single_file:t reveal_slide_number:t
 #+REVEAL_EXTRA_CSS: css.css
 #+REVEAL_THEME: beige
 
 * La asignatura
 
-En Proyectos II vais a hacer un juego 2D, aplicando todo lo aprendido en 2º
+En Proyectos II vais a hacer un juego 2D, aplicando todo lo aprendido en 1º y 2º
 
 #+REVEAL: split
 
-Se sigue un proceso muy parecido a Proyectos I y PVLI
+Se sigue un proceso muy parecido a (y coordinado con) Proyectos I y PVLI
 
 * Características de PRII
 
-- Grupos "grandes" (6-10 personas)
+- Grupos /grandes/ (8-10 personas)
 - C++/SDL (se puede usar TPV)
-- Libertad para usar otras librerías, siempre consultando
+- Libertad para usar otras librerías (consultad primero)
 - Énfasis adicional en buena gestión y diseño
 - *El código sigue siendo lo principal*
 
@@ -61,7 +60,7 @@ Los hitos también tendrán una *presentación*:
 
 Por grupos, presencial, en los laboratorios
 
-Las sesiones en aula serán planficadas y avisadas
+Las sesiones en aula serán planificadas y avisadas
 
 * Foro
 
@@ -76,9 +75,9 @@ Se tendrá en cuenta en la evaluación a aquellos estudiantes que colaboren acti
 
 ** ¿Qué cuenta?
 
-- *La implementación y arquitectura* principalmente
-- El diseño y la gestión, bastante
-- El arte y la comunicación se tendrán muy en cuenta
+1. *La implementación y arquitectura* principalmente
+2. El diseño y la gestión, bastante
+3. El arte y la comunicación se tendrán muy en cuenta
 
 #+REVEAL: split
 
@@ -86,11 +85,15 @@ Podéis usar /assets/ externos o hacerlos vosotros
 
 Lo que se tendrá en cuenta es la calidad del arte, la coherencia y técnica (paletas, aplicación de color, proporciones, sonidos apropiados...)
 
+** Evaluación continua
+
+Iréis teniendo notas y realimentación durante la asignatura, pero es sólo para que sepáis el estado y el criterio del equipo docente
+
+Se irá revisando el alcance del proyecto, y se os dará información sobre cómo vais y qué se espera que hagáis
+
 ** Nota
 
 *Sólo cuenta la última nota*, que es la que realmente resume la calidad del proyecto
-
-Iréis teniendo notas y realimentación durante la asignatura, pero es sólo para que sepáis el estado y el criterio del equipo docente
 
 ** Contribución
 
@@ -133,3 +136,4 @@ Todo estará organizado y anunciado en el CV
 # Local variables:
 # after-save-hook: org-re-reveal-export-to-html
 # end:
+
