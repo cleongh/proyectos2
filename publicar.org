@@ -1,5 +1,14 @@
-#+title: Publicar proyecto en la web
-#+OPTIONS: html-postamble:nil toc:nil
+#+TITLE: Publicar el proyecto en la web
+#+LANGUAGE: es
+#+OPTIONS: toc:nil reveal_history:t timestamp:nil date:nil author:nil num:nil reveal_single_file:t reveal_slide_number:t
+#+REVEAL_EXTRA_CSS: css.css
+#+REVEAL_THEME: beige
+
+* Qué publicar
+
+Es necesario hacer una página *pública* del proyecto
+
+Esta página no tiene documentación técnica, sino que es nuestra comunicación del proyecto
 
 * Cómo empaquetar
 
@@ -33,7 +42,6 @@ Tened cuidado con los recursos:
 - Aseguraos de que están cargados antes de iniciar su uso
 - Aseguraos de que están siempre disponibles
 
-#+REVEAL: split
 
 ** Página en la que incluir el proyecto
 
@@ -41,12 +49,12 @@ El archivo =index.html= tiene que ser una página presentable y "bonita"
 
 #+REVEAL: split
 
-Tiene que tener el título del proyecto, un resumen del GDD (una versión en HTML), enlaces pertinentes (como, por ejemplo, al código en =GitHub=), instrucciones y cualquier información adicional relevante
+Tiene que tener el título del proyecto, un resumen de la idea el juego, enlaces pertinentes (como, por ejemplo, al código en =GitHub=), instrucciones y cualquier información adicional relevante
 
 #+REVEAL: split
 
 Además, hay que poner la licencia del mismo e información de la asignatura
 
 # Local variables:
-# after-save-hook: org-html-export-to-html
+# after-save-hook: org-re-reveal-export-to-html
 # end:
