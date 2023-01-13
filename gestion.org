@@ -1,0 +1,147 @@
+#+TITLE: Proyectos II
+#+LANGUAGE: es
+#+OPTIONS: toc:nil reveal_history:t timestamp:nil date:nil author:nil num:nil reveal_single_file:t reveal_slide_number:t
+#+REVEAL_EXTRA_CSS: css.css
+#+REVEAL_THEME: beige
+
+
+
+
+
+* Usar un repositorio para gestión
+
+Los servicios de repositorio =git= permiten hacer la gestión del desarrollo
+
+
+#+REVEAL: split
+
+No son tan potentes como una herramienta dedicada ([[https://www.pivotaltracker.com/][Pivotal Tracker]], por ejemplo), pero se enlazan con el código y permiten tener *un solo repositorio para todo*
+
+* Creación del repositorio
+
+
+#+CAPTION: Un repositorio *tiene que tener una licencia*
+#+attr_html: :width 500
+[[./images/20220116-143200_screenshot.png]]
+
+
+* Historias de usuario
+
+
+#+CAPTION: Las historias de usuario serán /[[https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues][issues]]/
+[[./images/20220116-143534_screenshot.png]]
+
+
+* Sprints
+
+#+CAPTION: Los /sprints/ quedarán definidos a través de /milestones/
+#+attr_html: :width 600
+[[./images/20220116-143733_screenshot.png]]
+
+
+* Asociar historia de usuario a sprint
+
+#+CAPTION: Para ello, asignaremos el /milestone/ correspondiente a un sprint al /issue/
+#+attr_html: :width 600
+[[./images/20220116-143946_screenshot.png]]
+
+
+* Listas con marca (/checkboxes/)
+
+#+begin_example
+Esto estará completado cuando:
+
+- [ ] Se reciba el evento de barra espaciadora
+- [X] El personaje suba
+- [ ] El personaje caiga
+#+end_example
+
+#+REVEAL: split
+
+#+CAPTION: ¡Se pueden poner y quitar las marcas de las listas con cajas haciendo clic!
+[[./images/20220116-144545_screenshot.png]]
+
+
+
+* Asignar un responsable
+
+
+# [[download:20220116-144234_screenshot.png]]
+
+#+CAPTION:
+[[./images/20220116-144234_screenshot.png]]
+
+* Etiquetas
+:PROPERTIES:
+:ID:       3a872edf-0cf2-4eb9-b654-1204ceae107b
+:END:
+
+Las etiquetas son un sistema flexible y razonablemente potente para crear semánticas concretas en nuestro proyecto
+
+#+REVEAL: split
+
+
+#+CAPTION: Por ejemplo, podemos crear etiquetas para marcar /bugs/
+[[./images/bug.png]]
+
+** También se pueden crear /epics/
+
+#+CAPTION: Con un código de colores, se ve muy bien
+[[./images/epics.png]]
+
+** Se pueden tener varias etiquetas en una /issue/
+
+[[./images/varias_etiquetas.png]]
+
+#+REVEAL: split
+
+#+CAPTION: Y se puede hacer una búsqueda para ver sólo las historias con una etiqueta concreta
+[[./images/busqueda.png]]
+
+** Ideas para etiquetas (sugerencia)
+
+- $bug$ (indica errores encontrados)
+- $urgente$ (para detectar cosas a las que dedicarse)
+- $epic_1$, $epic_2$... (las /epics/)
+- $backlog$ / $icebox$ (Scrum)
+- $todo$ / $doing$ / $done$ (estados, redundante si se usan proyectos)
+
+#+REVEAL: split
+
+Una idea sencilla es usar $bug$, $urgente$, $epic_n$ y $icebox$, junto con /milestones/ de fechas (que no sean epics) y asignación de tareas a miembros
+
+* Proyectos
+
+#+CAPTION: GitHub permite crear /proyectos/, que funcionan en combinación con las /issues/
+[[./images/proyectos.png]]
+
+** Dos tipos
+
+GitHub tiene ahora mismo dos tipos: un /[[https://es.wikipedia.org/wiki/Kanban][kanban]]/ simple (el "antiguo") y una versión más moderna y potente, que permite mezclar varios repositorios
+
+#+REVEAL: split
+
+#+CAPTION: Una versión visual de las issues, como una tablero
+[[./images/kanban.png]]
+
+#+REVEAL: split
+
+#+CAPTION: O como una lista (con filtros y demás)
+[[./images/lista.png]]
+
+* Conclusión
+
+- Se puede hacer el 100% del proyecto en un único repositorio (¡también hay wikis!)
+- No es tan potente como herramientas especializadas, pero suele ser suficiente
+- Es un esquema de desarrollo cada vez más empleado, sobre todo en comunidades grandes
+
+* Ejemplos
+
+- [[https://github.com/cleongh/proyecto_ejemplo][Proyecto de ejemplo]]
+- [[https://github.com/features/issues][Documentación sobre la plataforma de proyectos en GitHub]]
+- [[https://about.gitlab.com/][También está disponible GitLab]] (con algunas cosas características, pero muy parecido)
+
+
+# Local variables:
+# after-save-hook: org-re-reveal-export-to-html
+# end:

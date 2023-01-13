@@ -1,0 +1,14 @@
+#+title: Recursos y herramientas generales para proyectos
+#+OPTIONS: html-postamble:nil toc:nil ^:{} 
+
+- Gráficos
+  - [[https://opengameart.org/][OpenGameArt]]
+- Sonido
+  - [[https://freesound.org/][Freesound]]
+- Edición UML
+  - [[https://gaphor.org/][Gaphor]]
+
+
+# Local variables:
+# after-save-hook: org-html-export-to-html
+# end:
