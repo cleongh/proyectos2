@@ -57,13 +57,9 @@ Además, hay que poner la licencia del mismo e información de la asignatura
 
 ** Publicación del repositorio
 
-El respositorio es privado y pertenece a una /Organización GitHub/ de la Facultad
+El respositorio es público y pertenece a una /Organización GitHub/ de la Facultad
 
-Si queréis que vuestro repositorio esté publico, podéis hacer una copia:
-
-- hacer público el repositorio
-- *quitar cualquier información personal*
-- enlazarla desde la página pública del proyecto
+*No pongáis ninguna información personal*
 
 
 
