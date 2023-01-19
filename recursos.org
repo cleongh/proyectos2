@@ -1,13 +1,19 @@
 #+title: Recursos y herramientas generales para proyectos
 #+OPTIONS: html-postamble:nil toc:nil ^:{} 
 
-- Gráficos
+- Dibujo
+  - [[https://libresprite.github.io/][LibreSprite]]
+  - [[https://krita.org/][Krita]]
+- Recursos gráficos gratuitos
   - [[https://opengameart.org/][OpenGameArt]]
-- Sonido
+- Recursos de sonido gratuitos
   - [[https://freesound.org/][Freesound]]
 - Edición UML
   - [[https://gaphor.org/][Gaphor]]
-
+- Edición de mapas
+  - [[https://www.mapeditor.org/][Tiled]]
+- Edición de audio
+  - [[https://www.audacityteam.org/][Audacity]]
 
 # Local variables:
 # after-save-hook: org-html-export-to-html

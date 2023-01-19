@@ -43,17 +43,29 @@ Tened cuidado con los recursos:
 - Aseguraos de que están siempre disponibles
 
 
-** Página en la que incluir el proyecto
+* Página en la que incluir el proyecto
 
 El archivo =index.html= tiene que ser una página presentable y "bonita"
 
 #+REVEAL: split
 
-Tiene que tener el título del proyecto, un resumen de la idea el juego, enlaces pertinentes (como, por ejemplo, al código en =GitHub=), instrucciones y cualquier información adicional relevante
+Tiene que tener el título del proyecto, un resumen de la idea el juego, enlaces pertinentes, instrucciones y cualquier información adicional relevante
 
 #+REVEAL: split
 
 Además, hay que poner la licencia del mismo e información de la asignatura
+
+** Publicación del repositorio
+
+El respositorio es privado y pertenece a una /Organización GitHub/ de la Facultad
+
+Si queréis que vuestro repositorio esté publico, podéis hacer una copia:
+
+- hacer público el repositorio
+- *quitar cualquier información personal*
+- enlazarla desde la página pública del proyecto
+
+
 
 # Local variables:
 # after-save-hook: org-re-reveal-export-to-html

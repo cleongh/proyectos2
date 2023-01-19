@@ -1,6 +1,6 @@
 #+TITLE: Proyectos II
 #+LANGUAGE: es
-#+OPTIONS: toc:nil reveal_history:t timestamp:nil date:nil author:nil num:nil reveal_single_file:t reveal_slide_number:t
+#+OPTIONS: toc:nil reveal_history:t timestamp:nil date:nil author:nil num:t reveal_single_file:t reveal_slide_number:t
 #+REVEAL_EXTRA_CSS: css.css
 #+REVEAL_THEME: beige
 
@@ -12,24 +12,31 @@ En Proyectos II vais a hacer un juego 2D, aplicando todo lo aprendido en 1º y 2
 
 Se sigue un proceso muy parecido a (y coordinado con) Proyectos I y PVLI
 
+* Profesores
+
+- Carlos León <[[mailto:cleon@ucm.es][cleon@ucm.es]]>
+- Alejandro Romero <[[mailto:alerom02@ucm.es][alerom02@ucm.es]]>
+
+
 * Características de PRII
 
 - Grupos /grandes/ (8-10 personas)
 - C++/SDL (se puede usar TPV)
 - Libertad para usar otras librerías (consultad primero)
+- Libertad para usar /assets/ propios y externos (¡con licencia!)
 - Énfasis adicional en buena gestión y diseño
 - *El código sigue siendo lo principal*
 
 
-* Grupos
+# * Grupos
 
-Podéis hacer los grupos como queráis, pero el equipo docente intervendrá en caso de conflicto
+# Podéis hacer los grupos como queráis, pero el equipo docente intervendrá en caso de conflicto
 
-** ¡Importante!
+# ** ¡Importante!
 
-Si hay cambios en los grupos, o miembros que no contribuyen, o cualquier cosa a resolver, *hay que avisar cuanto antes* para poder reaccionar
+# Si hay cambios en los grupos, o miembros que no contribuyen, o cualquier cosa a resolver, *hay que avisar cuanto antes* para poder reaccionar
 
-El equipo docente intentará mediar para solucionar el problema
+# El equipo docente intentará mediar para solucionar el problema
 
 
 
@@ -51,10 +58,6 @@ Los hitos también tendrán una *presentación*:
 - Dirigida y gestionada por la clase
 - Cada grupo tendrá que contar el juego, lo bueno y lo malo
 
-* Profesores
-
-- Carlos León <[[mailto:cleon@ucm.es][cleon@ucm.es]]>
-- Alejandro Romero <[[mailto:alerom02@ucm.es][alerom02@ucm.es]]>
 
 * Desarrollo de las sesiones
 
@@ -64,44 +67,29 @@ Las sesiones en aula serán planificadas y avisadas
 
 * Foro
 
+Es el *método de comunicación oficial*.
+
 El foro de la asignatura es muy, muy útil si se usa bien y se comparte contenido
 
 Se tendrá en cuenta en la evaluación a aquellos estudiantes que colaboren activamente en el foro
 
-* Evaluación
+# * Evaluación
 
-- Se evaluará el proyecto, como nota única de grupo
-- La nota se ponderará según contribución (explicado en el CV)
+# - Se evaluará el proyecto, como nota única de grupo
+# - La nota se ponderará según contribución (explicado en el CV)
 
-** ¿Qué cuenta?
+# ** ¿Qué cuenta?
 
-1. *La implementación y arquitectura* principalmente
-2. El diseño y la gestión, bastante
-3. El arte y la comunicación se tendrán muy en cuenta
+# 1. *La implementación y arquitectura* principalmente
+# 2. El diseño y la gestión, bastante
+# 3. El arte y la comunicación se tendrán muy en cuenta
 
-#+REVEAL: split
+# #+REVEAL: split
 
-Podéis usar /assets/ externos o hacerlos vosotros
+# Podéis usar /assets/ externos o hacerlos vosotros
 
-Lo que se tendrá en cuenta es la calidad del arte, la coherencia y técnica (paletas, aplicación de color, proporciones, sonidos apropiados...)
+# Lo que se tendrá en cuenta es la calidad del arte, la coherencia y técnica (paletas, aplicación de color, proporciones, sonidos apropiados...)
 
-** Evaluación continua
-
-Iréis teniendo notas y realimentación durante la asignatura, pero es sólo para que sepáis el estado y el criterio del equipo docente
-
-Se irá revisando el alcance del proyecto, y se os dará información sobre cómo vais y qué se espera que hagáis
-
-** Nota
-
-*Sólo cuenta la última nota*, que es la que realmente resume la calidad del proyecto
-
-** Contribución
-
-La contribución que declaréis tiene que /ser única/ y consensuada
-
-Será tenida en cuenta como dato adicional, pero *sólo a título informativo*
-
-Si hay problemas con el consenso, lo mejor es ponerse en contacto con el equipo docente
 
 * Alcance de la asignatura
 
@@ -130,7 +118,7 @@ La asignatura es 100% práctica, pero haremos algunas sesiones en el aula
 
 Todo estará organizado y anunciado en el CV
 
-(Explicar CV)
+# (Explicar CV)
 
 
 # Local variables:
