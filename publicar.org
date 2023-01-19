@@ -1,6 +1,6 @@
 #+TITLE: Publicar el proyecto en la web
 #+LANGUAGE: es
-#+OPTIONS: toc:nil reveal_history:t timestamp:nil date:nil author:nil num:nil reveal_single_file:t reveal_slide_number:t
+#+OPTIONS: toc:nil reveal_history:t timestamp:nil date:nil author:nil num:t reveal_single_file:t reveal_slide_number:t
 #+REVEAL_EXTRA_CSS: css.css
 #+REVEAL_THEME: beige
 
