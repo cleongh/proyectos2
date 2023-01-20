@@ -6,6 +6,7 @@
   - [[https://krita.org/][Krita]]
 - Recursos gráficos gratuitos
   - [[https://opengameart.org/][OpenGameArt]]
+  - [[https://itch.io/game-assets][Assets en itch.io]]
 - Recursos de sonido gratuitos
   - [[https://freesound.org/][Freesound]]
 - Edición UML
